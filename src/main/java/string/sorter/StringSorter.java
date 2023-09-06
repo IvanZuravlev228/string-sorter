@@ -1,4 +1,4 @@
-package org.example;
+package string.sorter;
 
 import java.util.ArrayList;
 import java.util.Comparator;
@@ -39,7 +39,7 @@ public class StringSorter {
             }
         }
         unsortedStrings.sort(Comparator.comparing(String::toLowerCase));
-        startWithExpChar.sort((str1, str2) -> str2.toLowerCase().compareTo(str1.toLowerCase()));
+        startWithExpChar.sort((firstString, secondString) -> secondString.toLowerCase().compareTo(firstString.toLowerCase()));
 
         List<String> result = new ArrayList<>(unsortedStrings);
         result.addAll(startWithExpChar);
